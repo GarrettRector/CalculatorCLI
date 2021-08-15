@@ -1,6 +1,3 @@
-import os
-
-
 def main():
     while True:
         inp = input()
@@ -9,6 +6,8 @@ def main():
                 inp = input()
                 if inp == "":
                     exec(open('methods/run.py').read())
+                else:
+                    main()
             case _:
                 write(inp)
 
@@ -27,6 +26,4 @@ def setup():
 
 
 if __name__ == '__main__':
-    if setup():
-        os.chmod('methods/run.py', 0b111101101)
     main()
